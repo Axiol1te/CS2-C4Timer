@@ -1,0 +1,27 @@
+# vim: set sts=2 ts=8 sw=2 tw=99 et:
+import sys
+from ambuild2 import run
+
+parser = run.BuildParser(sourcePath=sys.path[0], api='2.2')
+
+parser.default_build_folder = 'build'
+parser.options.add_argument('--hl2sdk-root', type=str, dest='hl2sdk_root', default=None,
+                   help='Root search folder for HL2SDKs')
+parser.options.add_argument('--mms-path', type=str, dest='mms_path', default=None,
+                   help='Path to Metamod:Source')
+parser.options.add_argument('--enable-debug', action='store_const', const='1', dest='debug',
+                   help='Enable debugging symbols')
+parser.options.add_argument('--enable-optimize', action='store_const', const='1', dest='opt',
+                   help='Enable optimization')
+parser.options.add_argument('-s', '--sdks', default='cs2', dest='sdks',
+                   help='Build against specified SDKs; valid args are "cs2"')
+parser.options.add_argument('--targets', type=str, dest='targets', default=None,
+                   help='Override the target architecture (use commas to separate multiple targets).')
+parser.options.add_argument('--hl2sdk-manifests', type=str, dest='hl2sdk_manifests', default=None,
+                   help='Path to HL2SDK manifests')
+parser.options.add_argument('--plugin-name', type=str, dest='plugin_name', default=None,
+                   help='Plugin name')
+parser.options.add_argument('--plugin-alias', type=str, dest='plugin_alias', default=None,
+                   help='Plugin alias')
+
+parser.Configure()

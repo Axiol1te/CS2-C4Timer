@@ -1,0 +1,32 @@
+"Phrases"
+{
+	"C4Timer_OnSite"
+	{
+		"ru"		"⏱️ Бомба на {1}: {2} секунд"
+		"en"		"⏱️ Bomb on {1}: {2} seconds"
+	}
+	
+	"C4Timer_NoSite"
+	{
+		"ru"		"⏱️ Бомба: {1} секунд"
+		"en"		"⏱️ Bomb: {1} seconds"
+	}
+	
+	"C4Timer_Planted"
+	{
+		"ru"		"💣 Бомба установлена на точке {1}!"
+		"en"		"💣 Bomb planted on site {1}!"
+	}
+	
+	"C4Timer_Exploded"
+	{
+		"ru"		"💥 Бомба взорвалась!"
+		"en"		"💥 Bomb exploded!"
+	}
+	
+	"C4Timer_Defused"
+	{
+		"ru"		"✅ Бомба обезврежена!"
+		"en"		"✅ Bomb defused!"
+	}
+}
