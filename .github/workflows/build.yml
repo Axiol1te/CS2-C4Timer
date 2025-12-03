@@ -33,7 +33,7 @@ jobs:
         run: |
           export DEBIAN_FRONTEND=noninteractive
           apt-get update -qy
-          apt-get install -y git clang-10 clang++-10 binutils python3 python3-pip zip protobuf-compiler
+          apt-get install -y git clang-10 clang++-10 binutils python3 python3-pip zip
 
           python3 -m pip install --upgrade pip importlib-metadata
           python3 -m pip install setuptools==45.2.0
@@ -55,13 +55,6 @@ jobs:
           mkdir samples
           cd samples
           git clone https://github.com/pisex/SchemaEntity.git
-          
-      - name: Generate protobuf files
-        run: |
-          cd $HL2SDK_ROOT/hl2sdk-cs2/common
-          protoc --cpp_out=. network_connection.proto
-          protoc --cpp_out=. networkbasetypes.proto
-          protoc --cpp_out=. networksystem_protomessages.proto
           
       - name: Configure and build plugin
         run: |
