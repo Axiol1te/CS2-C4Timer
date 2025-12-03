@@ -11,14 +11,17 @@
 - Visual progress bar showing remaining time
 - Bomb site detection (A/B)
 - Multi-language support (Russian, English)
-- Configurable update interval
 
 ## Configuration
 File: `addons/configs/C4Timer/core.ini`
 ```ini
-[Settings]
-# Timer update interval in seconds (default: 5)
-UpdateInterval = 5
+"Settings"
+{
+    "ShowTimerFrom"     "40"
+    "ShowSite"          "1"
+    "TimerEnabled"      "1"
+}
+
 ```
 
 ## Translations
@@ -35,3 +38,4 @@ You can add your own translations following the file format.
 💣 Bomb at site A | Time left: 35 sec
 [████████████░░░░░░░░] 70%
 ```
+
