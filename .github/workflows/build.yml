@@ -58,11 +58,10 @@ jobs:
           
       - name: Generate protobuf files
         run: |
-          cd external/hl2sdk-cs2/common/protobuf/src
+          cd $HL2SDK_ROOT/hl2sdk-cs2/common/protobuf/src
           protoc --cpp_out=. network_connection.proto
           protoc --cpp_out=. networkbasetypes.proto
           protoc --cpp_out=. networksystem_protomessages.proto
-          cd ../../../../..
           
       - name: Configure and build plugin
         run: |
